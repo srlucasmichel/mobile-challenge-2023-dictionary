@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'src/modules/dictionary/presenter/pages/word_list_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -59,6 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => WordListPage()));
   }
 
   @override
